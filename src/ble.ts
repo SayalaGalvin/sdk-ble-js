@@ -141,7 +141,7 @@ export class ImprovBluetoothLE extends EventTarget {
       this.device.gatt!.disconnect();
       this.dispatchEvent(new CustomEvent("disconnect"));
       this.nextUrl =
-        rpcResult.values.length > 0 ? rpcResult.values[0] : undefined;
+        rpcResult.values.length > 0 ? rpcResult.values[1] : undefined;
       return this.nextUrl;
     } catch (err) {
       // Do nothing. Error code will handle itself.
