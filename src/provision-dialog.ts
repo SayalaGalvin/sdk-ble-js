@@ -196,6 +196,7 @@ class ProvisionDialog extends LitElement {
             ></ib-button>
           `
         : html`
+            <div>${this._client.nextUrl}</div>
             <a
               href=${this._client.nextUrl}
               slot="primaryAction"
@@ -204,7 +205,6 @@ class ProvisionDialog extends LitElement {
             >
               <ib-button label="Next"></ib-button>
             </a>
-            <span>${this._client.nextUrl}</span>
           `}
     `;
   }
